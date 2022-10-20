@@ -11,13 +11,10 @@
 
 
     <% user.posts.each do |post| %>
-    <li>
-        <%= post.content %>
-          <% post.comments.each do |comment| %>
-          <li>
-            <%= comment.content %>
-          </li>
-          <% end %>
+      <%= render post %>
+        <% post.comments.each do |comment| %>
+          <%= render comment %>
+        <% end %>
     </li>
     <% end %>
 
